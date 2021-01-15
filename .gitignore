@@ -135,4 +135,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# File just for me
+main.c
+
 # End of https://www.toptal.com/developers/gitignore/api/c,macos,emacs

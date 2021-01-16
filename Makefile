@@ -6,11 +6,11 @@
 #    By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/15 16:01:33 by bzalugas          #+#    #+#              #
-#    Updated: 2021/01/15 20:11:32 by bzalugas         ###   ########.fr        #
+#    Updated: 2021/01/16 00:35:35 by bzalugas         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
-SRCS	= ft_atoi.c
+SRCS	= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_atoi.c
 
 OBJS 	= $(SRCS:.c=.o)
 
@@ -40,3 +40,36 @@ fclean:		clean
 re:			fclean all
 
 .PHONY:		all clean fclean re
+#
+#
+#
+#TEMPORAIRE :
+#
+# SRCS	= main.c ft_memset.c ft_bzero.c ft_memcpy.c ft_atoi.c
+
+# OBJS 	= $(SRCS:.c=.o)
+
+# NAME	= libft
+
+# CC		= cc
+# CFLAGS	= -Wall -Wextra -Werror
+
+# AR		= ar rc
+
+# RM		= rm -f
+
+# .c.o: #equivalent a %.o: %.c
+# 			$(CC) $(CFLAGS) -o $(<:.c=.o) -c $<
+
+# $(NAME):	$(OBJS)
+# 			$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+
+# all:		$(NAME)
+
+# clean:
+# 			$(RM) $(OBJS)
+
+# fclean:		clean
+# 			$(RM) $(NAME)
+
+# re:			fclean all

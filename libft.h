@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 01:12:34 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/16 02:09:45 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/16 02:58:57 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,25 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 size_t	ft_strlen(const char *s);
 
+int		ft_islower(int c);
+
+int		ft_isupper(int c);
+
 int		ft_isalpha(int c);
+
+int		ft_isdigit(int c);
+
+int		ft_isalnum(int c);
+
+int		ft_isascii(int c);
+
+int		ft_isprint(int c);
+
+int		ft_toupper(int c);
+
+int		ft_tolower(int c);
+
+char	*ft_strchr(const char *s, int c);
 
 int		ft_atoi(const char *str);
 

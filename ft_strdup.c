@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 01:11:46 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/18 23:57:12 by bzalugas         ###   ########.fr       */
+/*   Created: 2021/01/18 22:54:49 by bzalugas          #+#    #+#             */
+/*   Updated: 2021/01/18 23:47:40 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-int	main(void)
+char	*ft_strdup(const char *s1)
 {
-	return (0);
+	char	*copy;
+	size_t	len;
+
+	if (!s1)
+		return (NULL);
+	len = ft_strlen(s1);
+	if (!(copy = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	ft_strlcpy(copy, s1, len + 1);
+	return (copy);
 }

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 01:11:46 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/18 23:57:12 by bzalugas         ###   ########.fr       */
+/*   Created: 2021/01/18 22:15:05 by bzalugas          #+#    #+#             */
+/*   Updated: 2021/01/18 23:46:10 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-int	main(void)
+void	*ft_calloc(size_t count, size_t size)
 {
-	return (0);
+	void	*mem;
+
+	if (!(mem = (void *)malloc(size * count)))
+		return (NULL);
+	ft_bzero(mem, count);
+	return (mem);
 }

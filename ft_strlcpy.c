@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 03:43:10 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/16 04:19:29 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/18 20:35:31 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	i;
 
 	if (dstsize > 0)
 	{

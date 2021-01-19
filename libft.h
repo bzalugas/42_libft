@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 01:12:34 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/18 23:03:21 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/19 16:22:05 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,11 @@ int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 
 char	*ft_strdup(const char *s1);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+char		*ft_strtrim(char const *s1, char const *set);
 
 #endif

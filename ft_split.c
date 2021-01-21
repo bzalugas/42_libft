@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 21:05:00 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/20 22:20:10 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/21 14:41:37 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,44 @@ static size_t	init(char ***new, const char *s, char c)
 	size_t	i;
 	size_t	count;
 
-	count = 1;
+	count = 0;
 	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			while (s[i + 1] && s[i + 1] == c)
-				i++;
-			if (s[i + 1])
-				count++;
-		}
-		i++;
-	}
+    while (s[i])
+    {
+        while (s[i] && s[i] != c)
+            i++;
+        count++;
+        while (s[i] && s[i] == c)
+            i++;
+    }
+
+	/* while (s[i]) */
+	/* { */
+	/* 	if (s[i] && s[i] == c) */
+	/* 	{ */
+	/* 		while (s[i + 1] && s[i + 1] == c) */
+	/* 			i++; */
+    /*         count++; */
+	/* 	} */
+    /*     i++; */
+	/* } */
 	if (!(*new = (char **)malloc(sizeof(char *) * (count + 1))))
 		return (0);
 	*(*new + count) = NULL;
 	return (count);
+}
+
+static void		notgood(char **s)
+{
+	size_t	i;
+
+	i = 0;
+	while (*s[i])
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
 }
 
 static char		**cut_all(char **new, const char *s, char c, size_t max_len)
@@ -45,11 +66,15 @@ static char		**cut_all(char **new, const char *s, char c, size_t max_len)
 	i = 0;
 	start = 0;
 	count = 0;
-	while (s[i])
+	while (s[i] || count < max_len)
 	{
-		if (s[i] == c && s[i - 1] != c)
+		if ((s[i] == c && s[i - 1] != c) || (!s[i] && count < max_len))
 		{
-			new[count] = ft_substr(s, start, i - start);
+			if (!(new[count] = ft_substr(s, start, i - start)))
+				{
+					notgood(new);
+					return (NULL);
+				}
 			count++;
 			start = i + 1;
 		}
@@ -57,11 +82,9 @@ static char		**cut_all(char **new, const char *s, char c, size_t max_len)
 			start++;
 		i++;
 	}
-	if (count < max_len)
-		new[count] = ft_substr(s, start, i - start);
 	return (new);
 }
-
+#include <stdio.h>
 char			**ft_split(char const *s, char c)
 {
 	char	*s2;
@@ -69,8 +92,12 @@ char			**ft_split(char const *s, char c)
 	size_t	count;
 
 	s2 = ft_strtrim(s, &c);
-	count = init(&new, s2, c);
-	if (count)
-		new = cut_all(new, s2, c, count);
+
+//	if (ft_strlen(s2))
+//	{
+		count = init(&new, s2, c);
+		if (count)
+			new = cut_all(new, s2, c, count);
+//	}
 	return (new);
 }

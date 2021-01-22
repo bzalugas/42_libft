@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 01:12:34 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/20 22:05:58 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/22 14:17:41 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,12 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 char	**ft_split(char const *s, char c);
 
+char	*ft_itoa(int n);
+
 int		ft_islower(int c);
 
 int		ft_isupper(int c);
 
-void	ft_putstr(char *s);
+void	ft_putchar(char c);
 
 #endif

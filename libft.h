@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 01:12:34 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/25 12:45:17 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/25 22:44:38 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,6 @@ int					ft_islower(int c);
 
 int					ft_isupper(int c);
 
-void				ft_putchar(char c);
+void				ft_putchar(int c);
 
 #endif

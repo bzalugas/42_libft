@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 13:56:44 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/20 22:18:15 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/25 21:48:41 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 	char	*new;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s1);
 	while (s1[i] && is_set(s1[i], (char *)set))

@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 21:05:00 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/21 15:04:57 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/25 22:18:02 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static size_t	init(char ***new, const char *s, char c)
 
 	count = 0;
 	i = 0;
-	while (s[i])
+	while (s && s[i])
 	{
 		while (s[i] && s[i] != c)
 			i++;
@@ -27,22 +27,16 @@ static size_t	init(char ***new, const char *s, char c)
 		while (s[i] && s[i] == c)
 			i++;
 	}
-	if (!(*new = (char **)malloc(sizeof(char *) * (count + 1))))
+	if (!(*new = malloc(sizeof(char *) * (count + 1))))
 		return (0);
-	*(*new + count) = NULL;
+	(*new)[count] = NULL;
 	return (count);
 }
 
-static void		notgood(char **s)
+static void		notgood(char **s, size_t i)
 {
-	size_t	i;
-
-	i = 0;
-	while (*s[i])
-	{
-		free(s[i]);
-		i++;
-	}
+	while (i >= 0)
+		free(s[i--]);
 	free(s);
 }
 
@@ -61,7 +55,7 @@ static char		**cut_all(char **new, const char *s, char c, size_t max_len)
 		{
 			if (!(new[count] = ft_substr(s, start, i - start)))
 			{
-				notgood(new);
+				notgood(new, count - 1);
 				return (NULL);
 			}
 			count++;

@@ -6,7 +6,7 @@
 #    By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/15 16:01:33 by bzalugas          #+#    #+#              #
-#    Updated: 2021/01/25 11:52:27 by bzalugas         ###   ########.fr        #
+#    Updated: 2021/01/25 21:23:16 by bzalugas         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -33,7 +33,7 @@ OBJS 	= 	$(SRCS:.c=.o)
 
 NAME	= 	libft.a
 
-CC		= 	cc
+CC		= 	clang
 CFLAGS	= 	-Wall -Wextra -Werror
 
 AR		= 	ar rc

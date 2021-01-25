@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 14:22:45 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/22 14:32:29 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/25 22:25:15 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*res;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	if (!(res = ft_strdup(s)))
 		return (NULL);
 	i = 0;

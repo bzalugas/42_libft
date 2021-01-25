@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 01:11:46 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/25 12:46:19 by bzalugas         ###   ########.fr       */
+/*   Created: 2021/01/24 19:34:53 by bzalugas          #+#    #+#             */
+/*   Updated: 2021/01/24 20:40:04 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-int	main(void)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	return (0);
+	new->next = *alst;
+	*alst = new;
 }

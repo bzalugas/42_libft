@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 01:11:46 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/25 12:46:19 by bzalugas         ###   ########.fr       */
+/*   Created: 2021/01/24 19:30:43 by bzalugas          #+#    #+#             */
+/*   Updated: 2021/01/24 20:38:53 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-int	main(void)
+t_list	*ft_lstnew(void *content)
 {
-	return (0);
+	t_list	*new;
+
+	if (!(new = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

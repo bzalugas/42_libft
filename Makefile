@@ -6,7 +6,7 @@
 #    By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/15 16:01:33 by bzalugas          #+#    #+#              #
-#    Updated: 2021/01/22 14:55:44 by bzalugas         ###   ########.fr        #
+#    Updated: 2021/01/25 11:52:27 by bzalugas         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -18,22 +18,27 @@ SRCS	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c 
 			ft_putchar.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
+BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
 MAIN	=	main.c
+
+OBJB	=	$(BONUS:.c=.o)
 
 OBJM	=	$(MAIN:.c=.o)
 
-TNAME	= test
+TNAME	= 	test
 
-OBJS 	= $(SRCS:.c=.o)
+OBJS 	= 	$(SRCS:.c=.o)
 
-NAME	= libft.a
+NAME	= 	libft.a
 
-CC		= cc
-CFLAGS	= -Wall -Wextra -Werror
+CC		= 	cc
+CFLAGS	= 	-Wall -Wextra -Werror
 
-AR		= ar rc
+AR		= 	ar rc
 
-RM		= rm -f
+RM		= 	rm -f
 
 .c.o: #equivalent a %.o: %.c
 			$(CC) $(CFLAGS) -o $(<:.c=.o) -c $<
@@ -41,13 +46,16 @@ RM		= rm -f
 $(NAME):	$(OBJS)
 			$(AR) $(NAME) $(OBJS)
 
-test:		$(NAME)
+test:		$(NAME) bonus
 			$(CC) $(CFLAGS) -o $(TNAME) $(MAIN) -L. -lft
 
 all:		$(NAME)
 
+bonus:		$(OBJB)
+			$(AR) $(NAME) $(OBJB)
+
 clean:
-			$(RM) $(OBJS) $(OBJM)
+			$(RM) $(OBJS) $(OBJM) $(OBJB)
 
 fclean:		clean
 			$(RM) $(NAME) $(TNAME)

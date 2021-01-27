@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 11:51:26 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/22 14:16:11 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/26 10:12:07 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char					*ft_itoa(int n)
 	if (!(s = (char *)ft_calloc(pow + 1 + is_neg, sizeof(char))))
 		return (NULL);
 	i = pow - 1 + is_neg;
-	while (absolute(n) > 0)
+	while (i > 0)
 	{
 		s[i] = (absolute(n) % 10 + '0');
 		n = absolute(n) / 10;

@@ -6,77 +6,81 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 21:05:00 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/25 22:18:02 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/01/27 14:37:40 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	init(char ***new, const char *s, char c)
+static size_t	ft_count(char const *s, char c)
 {
-	size_t	i;
 	size_t	count;
+	size_t	i;
+	int		check;
 
 	count = 0;
 	i = 0;
+	check = 1;
 	while (s && s[i])
 	{
-		while (s[i] && s[i] != c)
-			i++;
-		count++;
-		while (s[i] && s[i] == c)
-			i++;
+		if (check && s[i] != c)
+		{
+			count++;
+			check = 0;
+		}
+		else if (s[i] == c)
+			check = 1;
+		i++;
 	}
-	if (!(*new = malloc(sizeof(char *) * (count + 1))))
-		return (0);
-	(*new)[count] = NULL;
 	return (count);
 }
 
-static void		notgood(char **s, size_t i)
+static char		*ft_cut(char const *s, char c, size_t *start)
 {
-	while (i >= 0)
-		free(s[i--]);
-	free(s);
+	int		rank;
+	int		i;
+	int		check;
+	int		end;
+	char	*tmp;
+
+	rank = -1;
+	i = *start;
+	check = 1;
+	end = 0;
+	while (s && s[i] && s[i] == c)
+		i++;
+	*start = i;
+	while (s && s[i] && s[i] != c)
+		i++;
+	if (!(tmp = malloc(sizeof(char) * i - *start + 1)))
+		return (NULL);
+	ft_strlcpy(tmp, &s[*start], i - *start + 1);
+	*start = i;
+	return (tmp);
 }
 
-static char		**cut_all(char **new, const char *s, char c, size_t max_len)
+static int		ft_cleanup(char **str, size_t i)
 {
-	size_t	i;
-	size_t	start;
-	size_t	count;
-
-	i = 0;
-	start = 0;
-	count = 0;
-	while (s[i] || count < max_len)
-	{
-		if ((s[i] == c && s[i - 1] != c) || (!s[i] && count < max_len))
-		{
-			if (!(new[count] = ft_substr(s, start, i - start)))
-			{
-				notgood(new, count - 1);
-				return (NULL);
-			}
-			count++;
-			start = i + 1;
-		}
-		else if (s[i] == c && s[i - 1] == c)
-			start++;
-		i++;
-	}
-	return (new);
+	while (i >= 0)
+		free(str[i--]);
+	free(str);
+	return (1);
 }
 
 char			**ft_split(char const *s, char c)
 {
-	char	*s2;
 	char	**new;
-	size_t	count;
+	int		count;
+	int		i;
+	size_t	start;
 
-	s2 = ft_strtrim(s, &c);
-	count = init(&new, s2, c);
-	if (count)
-		new = cut_all(new, s2, c, count);
+	count = ft_count(s, c);
+	if (!(new = ft_calloc(count + 1, sizeof(char *))))
+		return (NULL);
+	i = -1;
+	start = 0;
+	while (++i < count)
+		if (!(new[i] = ft_cut(s, c, &start)) && ft_cleanup(new, i))
+			return (NULL);
 	return (new);
 }

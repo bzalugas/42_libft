@@ -6,7 +6,7 @@
 /*   By: bzalugas <bzalugas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 21:05:00 by bzalugas          #+#    #+#             */
-/*   Updated: 2021/01/27 14:37:40 by bzalugas         ###   ########.fr       */
+/*   Updated: 2021/02/04 17:03:40 by bzalugas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static char		*ft_cut(char const *s, char c, size_t *start)
 	return (tmp);
 }
 
-static int		ft_cleanup(char **str, size_t i)
+static int		ft_cleanup(char **str, int i)
 {
 	while (i >= 0)
 		free(str[i--]);

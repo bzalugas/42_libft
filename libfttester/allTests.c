@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 15:12:12 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/09/05 17:14:25 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/09/05 17:45:52 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,9 @@ int	main(void)
 {
 	RunFtIsalpha();
 	RunFtIsdigit();
+	RunFtIsalnum();
+	RunFtIsascii();
+	RunFtIsprint();
+	RunFtStrlen();
 	return (0);
 }

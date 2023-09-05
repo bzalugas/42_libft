@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:25:24 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/09/05 17:05:05 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/09/05 17:13:48 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <ctype.h>
 
 CuSuite	*ft_isalpha_get_suite();
+void	RunFtIsalpha(void);
 CuSuite	*ft_isdigit_get_suite();
+void	RunFtIsdigit(void);
 
 #endif

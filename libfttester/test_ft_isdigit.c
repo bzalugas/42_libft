@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 17:02:43 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/09/05 17:04:58 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/09/05 17:12:46 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,17 @@ CuSuite	*ft_isdigit_get_suite()
 	CuSuite	*suite = CuSuiteNew();
 	SUITE_ADD_TEST(suite, TestNormalFtIsdigit);
 	return (suite);
+}
+
+void	RunFtIsdigit(void)
+{
+	CuString	*output = CuStringNew();
+	CuSuite		*suite = CuSuiteNew();
+
+	CuSuiteAddSuite(suite, ft_isdigit_get_suite());
+
+	CuSuiteRun(suite);
+	CuSuiteSummary(suite, output);
+	CuSuiteDetails(suite, output);
+	printf("ft_isdigit: %s\n", output->buffer);
 }

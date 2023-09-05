@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/09/04 17:46:19 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/09/06 01:20:46 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -23,15 +23,20 @@ OBJB	=	$(SRCB:.c=.o)
 
 CC		=	cc
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -g
+
+all:		$(NAME)
+
+so:
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+			gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 .c.o:
 			$(CC) $(CFLAGS) -o $(<:.c=.o) -c $<
 
+
 $(NAME):	$(OBJ)
 			ar -rcs $(NAME) $(OBJ)
-
-all:		$(NAME)
 
 bonus:		$(NAME) $(OBJB)
 			ar -rcs $(NAME) $(OBJB)
@@ -41,6 +46,8 @@ clean:
 
 fclean:		clean
 			rm -f $(NAME)
+			rm -f *.out
+			rm -f libft.so
 
 re:			fclean all
 

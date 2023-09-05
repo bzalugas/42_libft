@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 15:24:21 by bazaluga          #+#    #+#              #
-#    Updated: 2023/09/05 20:17:19 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/09/06 01:17:45 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -14,7 +14,7 @@ LIBFT	=	../libft.a
 
 NAME 	=	libftest
 
-SRC	 	=	$(wildcard *.c) $(wildcard tests/*.c)
+SRC	 	=	$(wildcard *.c)
 
 OBJ	 	=	$(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/09/06 01:20:46 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/09/07 11:08:29 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -27,10 +27,6 @@ CFLAGS	=	-Wall -Wextra -Werror -g
 
 all:		$(NAME)
 
-so:
-			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-			gcc -nostartfiles -shared -o libft.so $(OBJ)
-
 .c.o:
 			$(CC) $(CFLAGS) -o $(<:.c=.o) -c $<
 
@@ -40,6 +36,10 @@ $(NAME):	$(OBJ)
 
 bonus:		$(NAME) $(OBJB)
 			ar -rcs $(NAME) $(OBJB)
+
+so:
+			$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+			gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 clean:
 			rm -f $(OBJ)

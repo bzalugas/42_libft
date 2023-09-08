@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:18:47 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/09/04 17:54:51 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/09/08 17:48:53 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/* #include <stdio.h> */
-/* #include <string.h> */
-/* int	main(void) */
-/* { */
-/* 	char *d1 = memcpy(NULL, NULL, 4); */
-/* 	char *d2 = ft_memcpy(NULL, NULL, 4); */
-/* 	return (0); */
-/* } */

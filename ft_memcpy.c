@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:18:47 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/09/08 17:48:53 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/10/29 20:55:51 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (!src)
-		return (dst);
-	if (!dst)
+	/* if (!src) */
+	/* 	return (dst); */
+	/* if (!dst) */
+	/* 	return (NULL); */
+	if (!dst && !src)
 		return (NULL);
 	i = 0;
 	while (i < n)

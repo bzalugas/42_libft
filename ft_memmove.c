@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:23:35 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/09/07 10:14:04 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/02 18:29:29 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (!src || !n)
-		return (dst);
-	if (!dst)
-		return (NULL);
 	if (src < dst)
 	{
 		i = n;
@@ -29,7 +25,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			i--;
 		}
 	}
-	else if (src > dst)
+	else
 	{
 		i = 0;
 		while (i < n)

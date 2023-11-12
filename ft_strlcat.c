@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 19:20:55 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/12 19:49:49 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:06:35 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
+	len_src = 0;
+	while (src[len_src])
+		len_src++;
+	if (size == 0)
+		return (len_src);
 	i = 0;
 	while (dst[i])
 		i++;
-	j = 0;
-	while (src[j])
-		j++;
-	len_src = j;
 	if (size < i)
 		return (size + len_src);
 	j = 0;

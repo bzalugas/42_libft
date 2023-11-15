@@ -6,11 +6,9 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 16:58:42 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/09/04 17:02:41 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:42:57 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

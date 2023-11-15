@@ -6,11 +6,9 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:34:15 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/13 11:37:17 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:45:14 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -6,14 +6,11 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:45:44 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/14 11:47:41 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:43:42 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isspace(int c)
 {
-	return (((unsigned char)c >= 9 && (unsigned char)c <= 13)
-		|| (unsigned char)c == 32);
+	return ((c >= 9 && c <= 13) || c == 32);
 }

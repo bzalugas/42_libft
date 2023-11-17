@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 11:02:31 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/17 17:14:42 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/17 19:46:50 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 	size_t	i;
 
+	if (size > 0 && nmemb > ULONG_MAX / size)
+		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:24:01 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/20 13:31:53 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/20 18:09:09 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ char	*ft_strdup(const char *s)
 	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (!new)
 		return (NULL);
-	if (ft_strlcpy(new, s, len + 1) != len)
-		return (NULL);
+	ft_strlcpy(new, s, len + 1);
 	return (new);
 }

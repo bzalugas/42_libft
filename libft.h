@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:22:49 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/20 17:12:03 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/25 23:19:18 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ void	ft_putchar_fd(char c, int fd);
 
 /******************************* PERSONNAL ADDS *******************************/
 int		ft_isspace(int c);
+char	*ft_strndup(const char *s, size_t len);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 10:00:05 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/27 12:06:26 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/11/27 19:00:07 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static unsigned int	count_words(char const *s, char c)
 	return (words);
 }
 
-static size_t		len_word(char **s, char c)
+static size_t	len_word(char **s, char c)
 {
 	size_t	len;
 
@@ -42,7 +42,7 @@ static size_t		len_word(char **s, char c)
 	return (len);
 }
 
-static void		*big_free(char **arr)
+static void	*big_free(char **arr)
 {
 	size_t	i;
 
@@ -54,7 +54,7 @@ static void		*big_free(char **arr)
 	return (NULL);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	unsigned int	words;
 	size_t			len;
@@ -75,7 +75,7 @@ char			**ft_split(char const *s, char c)
 		len = len_word(&tmp, c);
 		arr[i] = (char *)ft_calloc(len + 1, sizeof(char));
 		if (!arr[i])
-			return big_free(arr);
+			return (big_free(arr));
 		ft_strlcpy(arr[i], tmp, len + 1);
 		tmp += len;
 		i++;

@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/11/28 19:28:49 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/12/03 01:50:19 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -45,9 +45,13 @@ $(NAME):	$(OBJ)
 bonus:		$(NAME) $(OBJB)
 			ar -rcs $(NAME) $(OBJB)
 
-so:
-			$(CC) -nostartfiles -fPIC -c $(CFLAGS) $(SRC)
-			cc -nostartfiles -shared -o libft.so $(OBJ) -ldl
+ifneq ($(shell uname), Darwin)
+breaker:
+			$(CC) -nostartfiles -shared -fPIC -ldl $(CFLAGS) -o libft.so $(SRC)
+else
+breaker:
+			$(CC) -dynamiclib $(CFLAGS) -o libft.so $(SRC) -L../obj -lmalloc
+endif
 
 clean:
 			rm -f $(OBJ)

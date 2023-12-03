@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:15:13 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/12/03 19:33:44 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/12/03 20:44:25 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	len;
 
 	if (!s)
-		return;
+		return ;
 	len = 0;
 	while (s[len])
 		len++;

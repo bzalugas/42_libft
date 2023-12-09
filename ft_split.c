@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 10:00:05 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/27 19:00:07 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/12/09 06:14:10 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ static unsigned int	count_words(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if (i == 0 && s[i] != c)
-			words++;
-		else if (i > 0 && s[i] != c && s[i - 1] == c)
+		if ((i == 0 && s[i] != c) || (i > 0 && s[i] != c && s[i - 1] == c))
 			words++;
 		i++;
 	}

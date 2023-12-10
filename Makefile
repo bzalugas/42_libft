@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/12/09 21:17:50 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/12/10 20:05:07 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -25,7 +25,7 @@ SRC		=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_isspace.c ft_strndup.c
 
 SRCB	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-			ft_lstadd_back.c
+			ft_lstadd_back.c ft_lstdelone.c
 
 OBJ		=	$(SRC:.c=.o)
 

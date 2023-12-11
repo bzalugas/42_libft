@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/12/11 00:45:09 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/12/11 01:31:50 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -58,6 +58,7 @@ endif
 
 clean:
 			rm -f $(OBJ)
+			rm -f $(OBJB)
 
 fclean:		clean
 			rm -f $(NAME)

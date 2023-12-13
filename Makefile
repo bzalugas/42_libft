@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/12/13 15:23:26 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/12/13 15:32:33 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -53,6 +53,14 @@ breaker:
 			$(CC) -nostartfiles -shared -fPIC -ldl $(CFLAGS) -o libft.so $(SRC) $(SRCB)
 else
 breaker:
+			$(CC) -dynamiclib $(CFLAGS) -o libft.so $(SRC) $(SRCB) -L../obj -lmalloc
+endif
+
+ifneq ($(shell uname), Darwin)
+so:
+			$(CC) -nostartfiles -shared -fPIC -ldl $(CFLAGS) -o libft.so $(SRC) $(SRCB)
+else
+so:
 			$(CC) -dynamiclib $(CFLAGS) -o libft.so $(SRC) $(SRCB) -L../obj -lmalloc
 endif
 

@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/12/11 01:31:50 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/12/13 15:23:26 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -45,7 +45,7 @@ all:		$(NAME)
 $(NAME):	$(OBJ)
 			ar -rcs $(NAME) $(OBJ)
 
-bonus:		$(NAME) $(OBJB)
+bonus:		$(OBJB)
 			ar -rcs $(NAME) $(OBJB)
 
 ifneq ($(shell uname), Darwin)

@@ -6,13 +6,13 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 15:10:00 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/11/27 16:42:35 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/12/18 11:37:25 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	int_size(long n)
+static size_t	int_size(long n)
 {
 	size_t	size;
 

@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/12/13 15:32:33 by bazaluga         ###   ########.fr        #
+#    Updated: 2023/12/18 14:35:43 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -34,7 +34,7 @@ OBJB	=	$(SRCB:.c=.o)
 
 CC		=	cc
 
-CFLAGS	=	-Wall -Wextra -Werror -g
+CFLAGS	=	-Wall -Wextra -Werror
 
 all:		$(NAME)
 

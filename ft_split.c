@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 10:00:05 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/12/09 06:14:10 by bazaluga         ###   ########.fr       */
+/*   Updated: 2023/12/18 11:11:12 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static unsigned int	count_words(char const *s, char c)
 {
-	unsigned int	words;
-	size_t			i;
+	size_t	words;
+	size_t	i;
 
 	words = 0;
 	i = 0;
@@ -54,11 +54,11 @@ static void	*big_free(char **arr)
 
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	words;
-	size_t			len;
-	size_t			i;
-	char			*tmp;
-	char			**arr;
+	size_t	words;
+	size_t	len;
+	size_t	i;
+	char	*tmp;
+	char	**arr;
 
 	if (!s)
 		return (NULL);

@@ -1,10 +1,10 @@
 * 42's libft project
 First project of 42, this one aims to teach us how to create a personal functions library.
+* Branches
+Evaluated version is on branch =42_eval=. The =master= branch aims to be my official enhanced libft.
 * Testers
 We can easily test our functions with existing testers on the web. For this project, I created *my own tester* that can be found [[https://github.com/bzalugas/libft-breaker][here]].
 Others are available at:
 - [[https://github.com/alelievr/libft-unit-test]]
 - [[https://github.com/Tripouille/libftTester]]
 - [[https://github.com/0x050f/libft-war-machine]]
-* Result
-[[./img/libft_success.png]]

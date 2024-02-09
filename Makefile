@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2023/12/18 14:35:43 by bazaluga         ###   ########.fr        #
+#    Updated: 2024/02/09 02:21:31 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -22,15 +22,11 @@ SRC		=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 			ft_putendl_fd.c ft_putnbr_fd.c\
 			\
-			ft_isspace.c ft_strndup.c
-
-SRCB	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-			ft_lstmap.c
+			ft_isspace.c ft_strndup.c ft_lstnew.c ft_lstadd_front.c \
+			ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJ		=	$(SRC:.c=.o)
-
-OBJB	=	$(SRCB:.c=.o)
 
 CC		=	cc
 
@@ -44,9 +40,6 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 			ar -rcs $(NAME) $(OBJ)
-
-bonus:		$(OBJB)
-			ar -rcs $(NAME) $(OBJB)
 
 ifneq ($(shell uname), Darwin)
 breaker:
@@ -66,7 +59,6 @@ endif
 
 clean:
 			rm -f $(OBJ)
-			rm -f $(OBJB)
 
 fclean:		clean
 			rm -f $(NAME)

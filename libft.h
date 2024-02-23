@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:22:49 by bazaluga          #+#    #+#             */
-/*   Updated: 2023/12/18 11:15:36 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/02/23 17:40:42 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+# include "ft_printf.h"
 
 /*********************************** PART 1 ***********************************/
 int		ft_isalpha(int c);
@@ -72,7 +73,13 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /******************************* PERSONNAL ADDS *******************************/
+long	ft_atol(const char *nptr);
 int		ft_isspace(int c);
 char	*ft_strndup(const char *s, size_t len);
+char	*ft_utohex(unsigned long n, char lower);
+
+/******************************* FT_PRINTF ************************************/
+int		ft_printf(const char *format, ...);
+
 
 #endif

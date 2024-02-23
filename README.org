@@ -3,13 +3,6 @@
 First project of 42, this one aims to teach us how to create a personal functions library. I created *my own tester* that can be found [[https://github.com/bzalugas/libft-breaker][here]].
 * Branches
 Evaluated version is on branch =42_eval=. The =master= branch aims to be my official enhanced libft.
-* Test implemented functions
-** =int      ft_atoi(const char *nptr)=
-Converts the initial portion of the string pointed to by =nptr= to =int=.
-** =long     ft_atol(const char *nptr)=
-Converts the initial portion of the string pointed to by =nptr= to =long=.
-** =void     ft_bzero(void *s, size_t)=
-Erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area.
 * Implemented functions
 | Function prototype                                                          | Soft description                                                                            |
 |-----------------------------------------------------------------------------+---------------------------------------------------------------------------------------------|

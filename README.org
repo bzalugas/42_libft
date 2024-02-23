@@ -9,7 +9,7 @@ Others are available at:
 * Implemented functions
 | Function prototype                                                          | Description                                                                |
 |-----------------------------------------------------------------------------+----------------------------------------------------------------------------|
-| <50>                                                                        | <50>                                                                       |
+| <100>                                                                       | <50>                                                                       |
 | =int      ft_atoi(const char *nptr)=                                        | Converts the initial portion of the string pointed to by =nptr= to =int=.  |
 | =long     ft_atol(const char *nptr)=                                        | Converts the initial portion of the string pointed to by =nptr= to =long=. |
 | =void     ft_bzero(void *s, size_t)=                                        |                                                                            |

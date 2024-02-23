@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:22:49 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 17:40:42 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/02/23 20:34:16 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <limits.h>
 # include "ft_printf.h"
+# include "get_next_line.h"
 
 /*********************************** PART 1 ***********************************/
 int		ft_isalpha(int c);
@@ -80,6 +81,5 @@ char	*ft_utohex(unsigned long n, char lower);
 
 /******************************* FT_PRINTF ************************************/
 int		ft_printf(const char *format, ...);
-
 
 #endif

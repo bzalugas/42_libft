@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:39:36 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 18:04:27 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/02/23 20:34:02 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ t_flags			*flags_init(void);
 
 char			*ft_itoa_printf(int n, t_flags *f);
 char			*ft_utoa_printf(unsigned int n);
-
 
 /********************************** HELPER ************************************/
 

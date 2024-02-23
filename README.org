@@ -10,6 +10,7 @@ Evaluated version is on branch =42_eval=. The =master= branch aims to be my offi
 | =long     ft_atol(const char *nptr)=                                        | ascii to =long=                                                                             |
 | =void     ft_bzero(void *s, size_t n)=                                      | Writes '\0' to =s= on =n= bytes                                                             |
 | =void     *ft_calloc(size_t nmemb, size_t size)=                            | Allocates a pointer & intializes it at 0                                                    |
+| =char     *get_next_line(int fd)=                                           | Returns the next line read in =fd=, NULL if error or EOF reached                            |
 | =int      ft_isalnum(int c)=                                                | Is =c= alphanumeric ?                                                                       |
 | =int      ft_isalpha(int c)=                                                | Is =c= alphabetic ?                                                                         |
 | =int      ft_isascii(int c)=                                                | Is =c= ascii ?                                                                              |

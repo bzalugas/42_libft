@@ -54,4 +54,3 @@ Evaluated version is on branch =42_eval=. The =master= branch aims to be my offi
 | =int      ft_tolower(int c)=                                                | Returns lowered letter in =c=                                                               |
 | =int      ft_toupper(int c)=                                                | Returns uppered letter in =c=                                                               |
 | =char     *ft_utohex(unsigned long n, char lower)=                          | unsigned to hexadecimal, with lower letters if =lower= is 1                                 |
->>>>>>> add-printf

@@ -6,3 +6,10 @@ Others are available at:
 - [[https://github.com/alelievr/libft-unit-test]]
 - [[https://github.com/Tripouille/libftTester]]
 - [[https://github.com/0x050f/libft-war-machine]]
+* Implemented functions
+| Function prototype                           | Description |
+|----------------------------------------------+-------------|
+| =int ft_atoi(const char *nptr)=              |             |
+| =long ft_atol(const char *nptr)=             |             |
+| =void ft_bzero(void *s, size_t)=             |             |
+| =void *ft_calloc(size_t nmemb, size_t size)= |             |

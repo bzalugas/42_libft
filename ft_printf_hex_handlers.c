@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hex_handlers.c                                     :+:      :+:    :+:   */
+/*   ft_printf_hex_handlers.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 22:53:43 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 18:06:00 by bazaluga         ###   ########.fr       */
+/*   Created: 2024/06/22 13:24:08 by bazaluga          #+#    #+#             */
+/*   Updated: 2024/06/22 13:27:56 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
 static bool	hex_put_add(t_buffer *buf, t_node *node, t_flags *f, char ox[3])
@@ -64,7 +65,7 @@ bool	handle_hex(t_buffer *buf, t_node *node, unsigned int arg)
 	int		len;
 
 	f = (t_flags *)node->content;
-	n = ft_utohex(arg, node->type == LHEX);
+	n = ft_utohex_printf(arg, node->type == LHEX);
 	if (!n)
 		return (false);
 	if (f->dot && f->pad == 0 && arg == 0)
@@ -105,7 +106,7 @@ bool	handle_ptr(t_buffer *buf, t_node *node, void *ptr)
 	}
 	else
 	{
-		n = ft_utohex((unsigned long)ptr, 1);
+		n = ft_utohex_printf((unsigned long)ptr, 1);
 		f->sharp = 1;
 	}
 	if (!n)

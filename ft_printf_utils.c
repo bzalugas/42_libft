@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 18:21:03 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 17:47:16 by bazaluga         ###   ########.fr       */
+/*   Created: 2024/06/22 13:24:43 by bazaluga          #+#    #+#             */
+/*   Updated: 2024/06/22 13:28:36 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
 static int	len_long(long n)
@@ -66,6 +67,40 @@ char	*ft_utoa_printf(unsigned int n)
 	{
 		res[len - 1] = n % 10 + '0';
 		n /= 10;
+		len--;
+	}
+	return (res);
+}
+
+static int	len_uint_hex(unsigned long n)
+{
+	int	len;
+
+	len = 1;
+	while (n > 15)
+	{
+		n /= 16;
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_utohex_printf(unsigned long n, bool lower)
+{
+	int		len;
+	char	*res;
+
+	len = len_uint_hex(n);
+	res = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!res)
+		return (NULL);
+	while (len)
+	{
+		if (lower)
+			res[len - 1] = "0123456789abcdef"[n % 16];
+		else
+			res[len - 1] = "0123456789ABCDEF"[n % 16];
+		n /= 16;
 		len--;
 	}
 	return (res);

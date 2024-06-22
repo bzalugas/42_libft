@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   int_handlers.c                                     :+:      :+:    :+:   */
+/*   ft_printf_int_handlers.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/15 18:16:24 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 17:46:47 by bazaluga         ###   ########.fr       */
+/*   Created: 2024/06/22 13:24:18 by bazaluga          #+#    #+#             */
+/*   Updated: 2024/06/22 13:28:19 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
 static void	modif_adds(char *sp, char *zer, t_flags *f, bool neg)

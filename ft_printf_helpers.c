@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helpers.c                                          :+:      :+:    :+:   */
+/*   ft_printf_helpers.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 22:48:46 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 17:46:23 by bazaluga         ###   ########.fr       */
+/*   Created: 2024/06/22 13:24:00 by bazaluga          #+#    #+#             */
+/*   Updated: 2024/06/22 13:27:47 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
 /* Helper for int/uint conversions */
+
+bool	get_float_adds(char **sp, t_flags *f)
+{
+	if (f->width)
+		*sp = (char *)ft_calloc(f->width + 1, sizeof(char));
+	if (!*sp && f->width)
+		return (free(*sp), false);
+	if (*sp && !f->zero)
+		ft_memset(*sp, ' ', f->width);
+	else if (*sp && f->zero)
+		ft_memset(*sp, '0', f->width);
+	return (true);
+}
 
 bool	get_int_uint_adds(char **sp, char **zer, t_flags *f)
 {

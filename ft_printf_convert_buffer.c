@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert_buffer.c                                   :+:      :+:    :+:   */
+/*   ft_printf_convert_buffer.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 02:43:21 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 17:46:02 by bazaluga         ###   ########.fr       */
+/*   Created: 2024/06/22 13:23:33 by bazaluga          #+#    #+#             */
+/*   Updated: 2024/06/22 13:23:39 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static bool	convert_node(t_buffer *buf, t_node *node, va_list args)
 {
@@ -31,6 +31,8 @@ static bool	convert_node(t_buffer *buf, t_node *node, va_list args)
 		check = handle_hex(buf, node, va_arg(args, unsigned int));
 	else if (node->type == PTR)
 		check = handle_ptr(buf, node, va_arg(args, void *));
+	else if (node->type == FLOAT)
+		check = handle_float(buf, node, va_arg(args, double));
 	else if (node->type == PERCENT)
 		check = handle_percent(buf, node);
 	node->type = CONV;

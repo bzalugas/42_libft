@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   char_str_handlers.c                                :+:      :+:    :+:   */
+/*   ft_printf_char_str_handlers.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 02:41:39 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 17:45:50 by bazaluga         ###   ########.fr       */
+/*   Created: 2024/06/22 13:23:23 by bazaluga          #+#    #+#             */
+/*   Updated: 2024/06/22 13:27:21 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
 bool	handle_char(t_buffer *buf, t_node *node, int c)

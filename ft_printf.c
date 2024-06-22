@@ -6,10 +6,11 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 23:39:50 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/02/23 17:43:12 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/06/22 13:26:28 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
 static t_type	get_type(char c)
@@ -28,6 +29,8 @@ static t_type	get_type(char c)
 		return (UHEX);
 	if (c == 'p')
 		return (PTR);
+	if (c == 'f')
+		return (FLOAT);
 	if (c == '%')
 		return (PERCENT);
 	return (ERR);

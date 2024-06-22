@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2024/06/19 13:04:55 by bazaluga         ###   ########.fr        #
+#    Updated: 2024/06/22 21:00:00 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -31,10 +31,10 @@ SRC		:=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			\
 			ft_printf.c ft_printf_buffer.c ft_printf_buffer2.c \
 			ft_printf_char_str_handlers.c ft_printf_convert_buffer.c \
-			ft_printf_flags_parsing.c ft_printf_helpers.c \
-			ft_printf_hex_handlers.c ft_printf_int_handlers.c \
+			ft_printf_flags_parsing.c ft_printf_float_handlers.c \
+			ft_printf_helpers.c ft_printf_hex_handlers.c ft_printf_int_handlers.c \
 			ft_printf_node.c ft_printf_uint_handlers.c ft_printf_utils.c \
-			ft_ftoa.c ft_strdup_free.c ft_strjoin_free.c\
+			ft_ftoa.c ft_ftoa_printf.c ft_strdup_free.c ft_strjoin_free.c\
 			\
 			get_next_line.c get_next_line_utils.c
 

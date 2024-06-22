@@ -6,11 +6,12 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 13:23:51 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/06/22 13:23:57 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/06/22 20:59:29 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft.h"
 
 static bool	float_put_add(t_buffer *buf, t_node *node, bool neg)
 {

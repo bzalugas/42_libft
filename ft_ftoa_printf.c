@@ -6,11 +6,11 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:43:27 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/06/22 12:43:30 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/06/22 21:00:33 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
 static size_t	n_size(long int_part)
 {

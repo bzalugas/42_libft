@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:22:49 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/07/04 19:35:10 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/07/30 18:09:08 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,7 @@ int				ft_strcmp(const char *s1, const char *s2);
 
 /******************************* FT_PRINTF ************************************/
 int				ft_printf(const char *format, ...);
+
+int				ft_dprintf(int fd, const char *format, ...);
 
 #endif

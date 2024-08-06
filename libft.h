@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:22:49 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/08/01 20:27:44 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/08/06 18:15:32 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ char			*ft_strjoin_free(char const *s1, char const *s2, int free1,
 int				free_split(char **arr);
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strreplace(char *str, char *to_replace, char *new_str,
-					unsigned int occ);
+					unsigned long long occ);
 
 /******************************* FT_PRINTF ************************************/
 int				ft_printf(const char *format, ...);

@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jsommet <jsommet@student.42.fr >           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 17:52:16 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/11/02 14:55:24 by bazaluga         ###   ########.fr       */
+/*   Created: 2023/11/09 09:31:19 by bazaluga          #+#    #+#             */
+/*   Updated: 2024/07/28 21:36:40 by jsommet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar_fd(char c, int fd)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	if (write(fd, &c, 1) < 1)
-		return (0);
-	return (1);
+	size_t	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	return (dst);
 }

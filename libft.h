@@ -6,7 +6,7 @@
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 17:22:49 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/08/06 18:15:32 by bazaluga         ###   ########.fr       */
+/*   Updated: 2024/11/02 15:00:07 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void			*ft_memset(void	*s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t n);
+char			*ft_strcpy(char *dst, const char *src);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 int				ft_toupper(int c);
@@ -51,9 +52,9 @@ char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
-void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(char *s, int fd);
-void			ft_putendl_fd(char *s, int fd);
+int				ft_putchar_fd(char c, int fd);
+int				ft_putstr_fd(char *s, int fd);
+int				ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
 /********************************* BONUS PART *********************************/
@@ -90,9 +91,14 @@ char			*ft_strdup_free(const char *s, int free_s);
 char			*ft_strjoin_free(char const *s1, char const *s2, int free1,
 					int free2);
 int				free_split(char **arr);
+unsigned int	count_words(char const *s, char c);
 int				ft_strcmp(const char *s1, const char *s2);
+void			ft_lstunlink(t_list **lst, t_list *link);
+size_t			ft_splitlen(char **arr);
+unsigned int	ft_atou_base(const char *nptr, const char *base);
 char			*ft_strreplace(char *str, char *to_replace, char *new_str,
 					unsigned long long occ);
+long long		ft_strtoll(const char *nptr, char **endptr, int base);
 
 /******************************* FT_PRINTF ************************************/
 int				ft_printf(const char *format, ...);

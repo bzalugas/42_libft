@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_splitlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 17:52:16 by bazaluga          #+#    #+#             */
-/*   Updated: 2024/11/02 14:55:24 by bazaluga         ###   ########.fr       */
+/*   Created: 2024/07/22 15:55:50 by bazaluga          #+#    #+#             */
+/*   Updated: 2024/07/22 15:57:11 by bazaluga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar_fd(char c, int fd)
+size_t	ft_splitlen(char **arr)
 {
-	if (write(fd, &c, 1) < 1)
+	size_t	i;
+
+	if (!arr)
 		return (0);
-	return (1);
+	i = 0;
+	while (arr[i])
+		i++;
+	return (i);
 }

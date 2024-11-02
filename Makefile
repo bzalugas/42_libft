@@ -6,7 +6,7 @@
 #    By: bazaluga <bazaluga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 16:22:14 by bazaluga          #+#    #+#              #
-#    Updated: 2024/08/01 20:27:16 by bazaluga         ###   ########.fr        #
+#    Updated: 2024/11/02 14:41:02 by bazaluga         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -24,7 +24,7 @@ SRC		:=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			\
 			ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-			ft_lstmap.c \
+			ft_lstmap.c ft_lstunlink.c\
 			\
 			ft_isspace.c ft_strndup.c ft_atol.c ft_utohex.c ft_max.c \
 			ft_max_arr.c ft_min.c ft_min_arr.c ft_abs.c ft_lstremove.c \
@@ -34,8 +34,9 @@ SRC		:=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_printf_flags_parsing.c ft_printf_float_handlers.c \
 			ft_printf_helpers.c ft_printf_hex_handlers.c ft_printf_int_handlers.c \
 			ft_printf_node.c ft_printf_uint_handlers.c ft_printf_utils.c \
-			ft_ftoa.c ft_ftoa_printf.c ft_strdup_free.c ft_strjoin_free.c\
-			free_split.c ft_strcmp.c ft_dprintf.c ft_strreplace.c\
+			ft_ftoa.c ft_ftoa_printf.c ft_strdup_free.c ft_strjoin_free.c \
+			free_split.c ft_strcmp.c ft_splitlen.c ft_strcpy.c ft_atou_base.c \
+			ft_strreplace.c ft_dprintf.c ft_strtoll.c\
 			\
 			get_next_line.c get_next_line_utils.c
 
@@ -47,18 +48,17 @@ CFLAGS	:=	-Wall -Wextra -Werror
 
 ########### COLORS ##########
 
-RED		:=	"\033[31m"
-GREEN	:=	"\033[32m"
+RED		:=  "\033[1;31m"
+GREEN	:=  "\033[1;32m"
 RESET	:=	"\033[0m"
 
 all:		$(NAME)
 
 .c.o:
-			@echo $(GREEN)"Compiling "$<$(RESET)
 			@$(CC) $(CFLAGS) -o $(<:.c=.o) -c $<
 
 $(NAME):	$(OBJ)
-			@echo $(GREEN)"\nAdding obj files to "$(NAME)$(RESET)
+			@echo $(GREEN)"Adding obj files to "$(NAME)$(RESET)
 			@ar -rcs $(NAME) $(OBJ)
 
 bonus:		$(NAME)
@@ -80,17 +80,17 @@ so:
 endif
 
 clean:
-			@echo $(RED)"CLEANING OBJS"
+			@echo $(RED)"LIBFT - CLEANING OBJS"
 			@rm -f $(OBJ)
-			@echo $(RESET)
+			@printf $(RESET)
 
 fclean:		clean
-			@echo $(RED)"CLEANING ALL"
+			@echo $(RED)"LIBFT - CLEANING ALL"
 			@rm -f $(NAME)
 			@rm -f libft.so
 			@rm -f *.out
 			@rm -rf *.dSYM
-			@echo $(RESET)
+			@printf $(RESET)
 
 re:			fclean
 			make -s all
